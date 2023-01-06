@@ -30,8 +30,8 @@ const MAX_PARTITION_KEY_LENGTH = 256;
 
 /*
     Using 'let' makes code inconsistent and difficult to follow, you have to keep up with the changing value of the variable which makes it difficult to follow.
-    When writing if statements I like to use the exit first approach it makes the code easier to follow and understand
-    Abstracting your code into smaller functions make it's cleaner and easier to test, you can test those functions independently.
+    When writing if statements I like to use the exit first approach it makes the code easier to follow, and it used to avoid nested if and else statements.
+    Abstracting your code into smaller functions make it's cleaner and easier to read, you can test those functions independently, and it also helps to avoid nested if statements.
  */
 const deterministicPartitionKey = (event) => {
     if (!event || typeof event !== 'object') {
